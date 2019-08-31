@@ -1,0 +1,43 @@
+#N canvas 581 198 507 351 12;
+#X obj 260 60 notein;
+#X obj 260 113 pack 0 0 0;
+#X obj 260 183 noteout;
+#X obj 260 158 unpack 0 0 0;
+#X text 165 113 chan note vel;
+#X msg 260 135 \$2 \$3 \$1;
+#X obj 260 86 poly 8;
+#X text 130 86 pick one of 8 chan;
+#X text 200 60 note vel;
+#X text 165 184 note vel chan;
+#X text 39 29 Arturia = input;
+#X text 11 41 Overbridge = output;
+#X text 46 17 MIDI settings:;
+#X obj 19 261 loadbang;
+#N canvas 1122 143 632 468 copyrightInfo 0;
+#X text 74 306 j.raski@gmail.com;
+#X text 43 19 This program creates polyphonic music on an Elektron
+Digitakt. Copyright (C) 2019 Jerry Z. Raski This program is free software:
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License as published by the Free Software Foundation
+\, either version 3 of the License \, or (at your option) any later
+version. This program is distributed in the hope that it will be useful
+\, but WITHOUT ANY WARRANTY \; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+Public License for more details. You should have received a copy of
+the GNU General Public License along with this program. If not \, see
+<https://www.gnu.org/licenses/>.;
+#X restore 83 301 pd copyrightInfo;
+#X obj 19 301 print -n;
+#X msg 19 281 PolyDigitakt Copyright (C) 2019 Jerry Z Raski;
+#X connect 0 0 6 0;
+#X connect 0 1 6 1;
+#X connect 1 0 5 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 3 2 2 2;
+#X connect 5 0 3 0;
+#X connect 6 0 1 0;
+#X connect 6 1 1 1;
+#X connect 6 2 1 2;
+#X connect 13 0 16 0;
+#X connect 16 0 15 0;
